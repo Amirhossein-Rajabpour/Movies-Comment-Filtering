@@ -1,0 +1,10 @@
+{
+  "platform": "django",
+  "app": "movies-django",
+    "disks": [
+    {
+      "name": "mi-files",
+      "mountTo": "."
+    }
+  ]
+}

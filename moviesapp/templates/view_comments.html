@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments</title>
+</head>
+<body>
+    <h3>Comments for movie {{ movie.name }} with id {{ movie.id }} in {{ language }}</h3>
+    <h4>Directed by: {{ movie.director_name }}</h4>
+
+    {% if language == 'en' %}
+        <ul>
+            {% for comment in comments %}
+            <li>User: {{ comment.writer }}</li>
+            <p>{{ comment.comment_in_english }}</p>
+        {% endfor %}
+        </ul>
+
+    {% elif language == 'de' %}
+        <ul>
+            {% for comment in comments %}
+            <li>User: {{ comment.writer }}</li>
+            <p>{{ comment.comment_in_german }}</p>
+        {% endfor %}
+        </ul>
+
+    {% elif language == 'fr' %}
+        <ul>
+            {% for comment in comments %}
+            <li>User: {{ comment.writer }}</li>
+            <p>{{ comment.comment_in_french }}</p>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>

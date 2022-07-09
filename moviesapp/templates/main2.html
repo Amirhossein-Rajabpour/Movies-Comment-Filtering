@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+</head>
+<body>
+    <ul>
+        {% for movie in movies %}
+            <li>name: {{ movie.name }}</li>
+            <p>directed by: {{ movie.director_name }}</p>
+            <img src={{ movie.poster }}>
+            <form action="/movies/{{ movie.id }}/addcomments/">
+              <button type="submit">Add Comment</button>
+            </form><br>
+
+            <form action="/movies/{{ movie.id }}/lang" method="post">
+              <button type="submit">View Comments</button>
+            </form>
+            <br>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

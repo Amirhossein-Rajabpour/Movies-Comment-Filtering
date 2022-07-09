@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose your language</title>
+</head>
+<body>
+    <h3>Movie {{ movie_id }}</h3>
+    <h3>Choose between the following languages for comments</h3>
+    <form action="/movies/{{ movie_id }}/" method="get">
+
+        <input type="radio" id="English" name="lang" value="en">
+        <label for="English">English</label><br>
+        <input type="radio" id="German" name="lang" value="de">
+        <label for="German">German</label><br>
+        <input type="radio" id="French" name="lang" value="fr">
+        <label for="French">French</label><br>
+
+        <input type="submit" value="select language">
+    </form>
+</body>
+</html>
